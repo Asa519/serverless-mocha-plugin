@@ -7,6 +7,7 @@
 
 const path = require('path');
 const lambdaWrapper = require('lambda-wrapper');
+require('ts-mocha');
 const Mocha = require('mocha');
 const chai = require('chai');
 const ejs = require('ejs');
