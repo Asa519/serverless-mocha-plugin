@@ -1,13 +1,30 @@
-# Serverless Mocha Plugin
+# Serverless Mocha Typescript
 
-[![Build Status](https://travis-ci.org/nordcloud/serverless-mocha-plugin.svg?branch=master)](https://travis-ci.org/nordcloud/serverless-mocha-plugin)
+This repo is just a clone of Serverless Mocha Plugin but with ~~two~~ three lines changed in order to make it work in typescript. Here's how you can use it:
 
-A Serverless Plugin for the [Serverless Framework](http://www.serverless.com), which
-adds support for test driven development using [mocha](https://mochajs.org/)
+First, install ts-mocha if you don't already have it:
 
-**THIS PLUGIN REQUIRES SERVERLESS V1!**
+```bash
+npm i -D ts-mocha
+```
 
-More familiar with Jest? Use [serverless-jest-plugin](https://github.com/sc5/serverless-jest-plugin).
+Now, add the following lines to "devDependencies" in package.json:
+```
+"serverless-mocha-typescript": "git+https://source.cde.mgw.leidos.com/scm/eos/serverless-mocha-plugin.git"
+```
+
+Next, add the plugin to `serverless.yml`:
+
+```yml
+plugins:
+  - serverless-mocha-typescript
+```
+
+Finally, run ```npm install```, and you should be able to find serverless-mocha-typescript in your node_modules directory.
+
+The original serverless-mocha-plugin instructions should all be applicable now.
+
+
 
 ## Introduction
 
@@ -16,20 +33,6 @@ This plugin does the following:
 * It provides commands to create and run tests manually
 * It provides a command to create a function, which automatically also creates a test
 
-## Installation
-
-In your service root, run:
-
-```bash
-npm install --save-dev serverless-mocha-plugin
-```
-
-Add the plugin to `serverless.yml`:
-
-```yml
-plugins:
-  - serverless-mocha-plugin
-```
 
 ## Usage
 
