@@ -366,7 +366,7 @@ class mochaPlugin {
     }
     const func = myModule.serverless.service.functions[funcName];
     const handlerParts = func.handler.split('.');
-    const funcPath = (`${handlerParts[0]}.js`).replace(/\\/g, '/');
+    const funcPath = (`${handlerParts[0]}.ts`).replace(/\\/g, '/');
     const handler = handlerParts[handlerParts.length - 1];
 
     let templateFilenamePath = '';
