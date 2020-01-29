@@ -10,7 +10,7 @@ npm i -D ts-mocha
 
 Now, add the following lines to "devDependencies" in package.json:
 ```
-"serverless-mocha-typescript": "git+https://source.cde.mgw.leidos.com/scm/eos/serverless-mocha-plugin.git"
+"serverless-mocha-typescript": "git+https://github.com/Asa519/serverless-mocha-plugin.git"
 ```
 
 Next, add the plugin to `serverless.yml`:
